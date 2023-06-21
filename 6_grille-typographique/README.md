@@ -5,4 +5,4 @@
 ## Ressources
 
 - [Using grids in interface designs](https://www.nngroup.com/articles/using-grids-in-interface-designs/)
-- [Grid systems in graphic gesign](https://monoskop.org/images/a/a4/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf)
+- [Grid systems in graphic design](https://monoskop.org/images/a/a4/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf)

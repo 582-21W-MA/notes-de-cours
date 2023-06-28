@@ -8,6 +8,7 @@
 - [Practical Typography](https://practicaltypography.com)
 - [The Elements of Typographic Style Applied the Web](http://webtypography.net/toc/)
 - [Banque de dépannage linguistique](https://vitrinelinguistique.oqlf.gouv.qc.ca/banque-de-depannage-linguistique/la-typographie)
+- [Accéder aux polices locales sur votre ordinateur dans Figma](https://help.figma.com/hc/fr/articles/360039956894-Accéder-aux-polices-locales-sur-votre-ordinateur)
 
 ### Polices et fonderies
 

@@ -11,7 +11,7 @@
 
 ### Polices et fonderies
 
--   [Home](https://abcdinamo.com/)
+-   [Dinamo](https://abcdinamo.com/)
 -   [Klim Type Foundry](https://klim.co.nz/)
 -   [Out Of The Dark](https://www.outofthedark.xyz/)
 -   [DJR](https://djr.com/)
@@ -20,10 +20,10 @@
 -   [Commercial Type](https://commercialtype.com/)
 -   [Commercial Classics](https://commercialclassics.com/)
 -   [Lineto.com](https://lineto.com/#brown-translate)
--   [Home — Colophon Foundry](https://www.colophon-foundry.org/)
+-   [Colophon Foundry](https://www.colophon-foundry.org/)
 -   [Production Type](https://www.productiontype.com/)
--   [TypeMates — Homepage](https://www.typemates.com/)
--   [Welcome to Grilli Type – Independent Swiss Type Foundry](https://www.grillitype.com/)
+-   [TypeMates](https://www.typemates.com/)
+-   [Grilli Type](https://www.grillitype.com/)
 -   [Source Type](https://www.sourcetype.com/)
 -   [The Pyte Foundry](https://thepytefoundry.net/)
 -   [AUTHENTIC Sans](https://authentic.website/sans)

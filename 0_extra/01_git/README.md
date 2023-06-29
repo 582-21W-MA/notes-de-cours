@@ -183,7 +183,7 @@ Date:   Sat Mar 15 10:31:28 2008 -0700
 
 Par défaut, Git énumère les *commits* en ordre chronologique inversé. Les *commits* les plus récents apparaissent donc en premier.
 
-Vous observerez aussi que chaque *commit* est identifiée par une suite de caractères unique, communément appelée Git ID, SHA ou *hash*.
+Vous observerez aussi que chaque *commit* est identifié par une suite de caractères unique, communément appelée Git ID, SHA ou *hash*.
 
 ### Annuler des actions
 
@@ -195,7 +195,23 @@ Avec Git, il est possible de voyager dans le temps, et de visiter notre projet a
 git checkout ID-du-commit
 ```
 
+Attention à ne pas oublier de revenir dans le « présent » avant de créer de nouveaux *commits*. Pour ramener votre copie de travail à la dernière validation effectuée, il faut exécuter la commande suivante :
 
+```sh
+git checkout main
+```
+
+<details>
+<summary>
+
+#### Exercise 5
+
+</summary>
+
+> Rétablissez votre copie de travail à un état précédent.
+> 
+
+</details>
 
 ### Ignorer des fichiers
 

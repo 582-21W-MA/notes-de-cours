@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://maxime-pigeon.github.io/example-block/example-block.js" type="module"></script>
+	<title>CSS Grid</title>
+</head>
+
+<body>
+	<!------------------------------------------------------------------------->
+	<!-- CSS GRID LAYOUT ------------------------------------------------------>
+	<!------------------------------------------------------------------------->
+
+	<!-- « CSS Grid Layout » est un système de mise en page bidimensionnel. Il
+	vous permet de disposer les contenus en lignes et en colonnes.  -->
+
+	<!-- Pour définir une grille, on affecte la valeur `grid` à la propriété
+	`display`. De la même manière qu'avec Flexbox, tous les enfants directs du
+	conteneur deviennent des éléments de la grille. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block name="display: grid">
+		
+	
+	</example-block>
+
+	<!-- VOCABULAIRE ---------------------------------------------------------->
+
+	<!-- Une *grille* est constituée de *rangées* de colonnes ou de lignes.
+	L'espace entre chaque rangée est appelé *gouttière*. -->
+
+	<!------------------------------------------------------------------------->
+	<!-- GOUTTIÈRES ----------------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Pour créer des gouttières entre les rangées, nous nous servons des
+	propriétés `column-gap` et `row-gap`. La propriété `gap` définit les deux
+	d'un coup. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block name="gap">
+		
+	
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- GRID-TEMPLATE-COLUMNS & GRID-TEMPLATE-ROWS --------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Par défaut, `display: grid` affiche une grille à une seule colonne.
+	Pour ajouter des colonnes et des lignes à notre grille, nous utilisons
+	respectivement les propriétés `grid-template-columns` et
+	`grid-template-rows`. Vous pouvez utiliser n'importe quelle unité de taille
+	pour créer une rangée. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block name="grid-template-columns & grid-template-rows">
+		
+	
+	</example-block>
+
+	<!-- UNITÉ `FR` ----------------------------------------------------------->
+
+	<!-- En plus des unités de longueur et des pourcentages, nous pouvons
+	utiliser l'unité `fr` pour moduler la taille des lignes et colonnes d'une
+	grille. Cette unité représente une fraction de l'espace *disponible* (et non
+	totale) du conteneur. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block name="unité fr">
+		
+	
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+
+	<!-- Il est possible de mélanger les unités `fr` et des largeurs fixes.
+	L'espace nécessaire aux colonnes de largeur fixe sera réservé avant la
+	distribution proportionnelle de l'espace restant aux autres colonnes. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block name="fr + largeurs fixes">
+		
+	
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- LA FONCTION `REPEAT()` ----------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Vous pouvez répéter tout ou partie d'une liste de colonnes à l'aide de
+	la fonction CSS `repeat()`. La fonction `repeat()` prend 2 arguments
+	séparées par une virgule : le nombre de répétitions de la liste, et la
+	valeur que vous voulez répéter.  -->
+
+	<!-- Exemple -------------------------------------------------------------->
+	
+	<example-block name="repeat()">
+		
+	
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- LA FONCTION `MINMAX()` ----------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- La fonction `minmax()` nous permet de fixer une taille minimale et
+	maximale pour une rangée. Par exemple, pour `minmax(100px, auto)`, la taille
+	minimale est de 100 pixels, mais la maximale est `auto` — elle s'agrandira
+	selon le contenu. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block name="minmax()">
+		
+	
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- LA MOT-CLÉ `AUTO-FILL` ----------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Il est possible de jumeler la fonction `repeat()` avec le mot-clé
+	`auto-fill` pour générer autant de rangées que nécessaire. Attention,
+	`auto-fill` ne fonctionne toutefois pas avec la taille `auto`. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block name="auto-fill">
+		
+	
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- PLACEMENT SUR LES FILS ----------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Passons maintenant à la mise en place des éléments dans la grille. Si
+	vous inspectez une grille à l'aide de l'inspecteur de votre navigateur Web,
+	vous remarquerez qu'elle contient plusieurs *fils* numérotés selon le mode
+	d'écriture du document. Il est possible de placer les éléments de votre
+	grille sur ces fils à l'aide des propriétés `grid-column` et `grid-row`. Ces
+	propriétés acceptent 2 valeurs séparées par une barre oblique : le numéro de
+	fil de départ / numéro de fil de fin. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block name="grid-column & grid-row">
+		
+	
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+
+	<!-- Vous pouvez aussi utiliser la valeur -1 pour cibler la dernière rangée
+	de la grille et compter vers l'intérieur à partir de la fin en utilisant des
+	valeurs négatives.  -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block name="valeur négative">
+		
+	
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+
+	<!-- Les propriétés `grid-column` et `grid-row` acceptent également la
+	valeur `span` suivi d'un nombre de rangée sur lequel s'étendra l'élément en
+	question. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block name="span">
+		
+	
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- GRID-TEMPLATE-AREAS -------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Une autre façon de placer des éléments dans la grille consiste à
+	utiliser la propriété `grid-template-areas` en donnant un nom au divers
+	éléments du design. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block name="grid-template-areas">
+		
+	
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- RESSOURCES ----------------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- https://www.smashingmagazine.com/2020/01/understanding-css-grid-container/ -->
+	<!-- https://developer.mozilla.org/fr/docs/Learn/CSS/CSS_layout/Grids -->
+</body>
+
+</html>

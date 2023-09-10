@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,
+	initial-scale=1.0" />
+	<script src="https://maxime-pigeon.github.io/example-block/example-block.js" type="module"></script>
+	<title>Animations</title>
+</head>
+
+<body>
+	<!--------------------------------------------------------------->
+	<!-- LES ANIMATIONS CSS ----------------------------------------->
+	<!--------------------------------------------------------------->
+
+	<!-- Les animations CSS permettent de créer des transitions entre
+	deux états de mise en forme. Une animation est décrite par deux
+	choses : des propriétés propres à l'animation et un ensemble
+	d'étapes (keyframes) qui indiquent l'état initial, final et les
+	états intermédiaires. -->
+
+	<!-- Trois avantages permettent de distinguer les animations CSS
+	des techniques d'animations utilisant JavaScript : -->
+
+	<!-- On peut aisément obtenir des animations simples sans avoir à
+	connaître JavaScript. -->
+
+	<!-- Les animations s'exécuteront correctement même lorsque le
+	système est soumis à une charge modérée. Il est possible que des
+	animations JavaScript s'exécutent lentement si elles sont mal
+	décrites. Dans le cadre des animations CSS, le moteur de rendu
+	peut utiliser certaines techniques (comme le frame-skipping) afin
+	que le résultat obtenu soit aussi fluide que possible. -->
+
+	<!-- En laissant le contrôle de l'animation au navigateur,
+	celui-ci peut optimiser les performances et l'efficacité du
+	système, par exemple en réduisant la fréquence de mise à jour des
+	animations qui sont exécutées dans des onglets qui ne sont pas
+	visibles à l'écran. -->
+
+	<!--------------------------------------------------------------->
+	<!-- PARAMÉTRER L'ANIMATION ------------------------------------->
+	<!--------------------------------------------------------------->
+
+	<!-- Pour créer une animation CSS, il faut utiliser la propriété
+	raccourcie `animation` ou les propriétés détaillées
+	correspondantes sur un ou plusieurs éléments. Cette propriété
+	permet de configurer la durée, le minutage et d'autres détails à
+	propos de l'animation. -->
+
+	<!-- Attention, cela ne détermine pas l'apparence visuelle de
+	l'animation. Celle-ci est définie en utilisant des règles CSS de
+	mise en forme au sein de la règle `@keyframes`. -->
+
+	<!-- animation-name --------------------------------------------->
+
+	<!-- Cette propriété permet de déclarer un nom qui pourra être
+	utilisé comme référence à l'animation pour la règle @keyframes.
+	-->
+
+	<!-- Exemple ---------------------------------------------------->
+
+	<example-block name="animation-name">
+
+		<style>
+			/* Attention, comme toutes les autres règles @, la règle
+		    `@keyframe` doit être déclarée au premier niveau, et non
+		    pas à l'intérieur d'un sélecteur. */
+			@keyframes slide {
+				0% {
+					margin-top: 0;
+					color: red;
+				}
+
+				100% {
+					margin-top: 5rem;
+					color: yellow;
+				}
+			}
+
+			button {
+				animation-name: slide;
+			}
+		</style>
+
+		<button>Button</button>
+
+	</example-block>
+
+	<!-- animation-duration ----------------------------------------->
+
+	<!-- Cette propriété définit la durée d'un cycle de l'animation.
+	-->
+
+	<!-- Exemple ---------------------------------------------------->
+
+	<example-block name="animation-duration">
+
+		<style>
+			@keyframes slide {
+				0% {
+					margin-top: 0;
+					color: red;
+				}
+
+				100% {
+					margin-top: 5rem;
+					color: yellow;
+				}
+			}
+
+			button {
+				animation-name: slide;
+				animation-duration: 5s;
+			}
+		</style>
+
+		<button>Button</button>
+
+	</example-block>
+
+	<!-- animation-iteration-count ---------------------------------->
+
+	<!-- Cette propriété détermine le nombre de fois que l'animation
+	est répétée. On peut utiliser le mot-clé `infinite` afin de
+	répéter une animation infiniment. -->
+
+	<!-- Exemple ---------------------------------------------------->
+
+	<example-block name="animation-iteration-count">
+
+		<style>
+			@keyframes slide {
+				0% {
+					margin-top: 0;
+					color: red;
+				}
+
+				100% {
+					margin-top: 5rem;
+					color: yellow;
+				}
+			}
+
+			button {
+				animation-name: slide;
+				animation-duration: 5s;
+				animation-iteration-count: infinite;
+			}
+		</style>
+
+		<button>Button</button>
+
+	</example-block>
+
+	<!-- animation-delay --------------------------------------------->
+
+	<!-- Cette propriété définit le délai entre le moment où l'élément
+	est chargé et le moment où l'animation commence. -->
+
+	<!-- Exemple ---------------------------------------------------->
+	
+	<!-- <button style=" animation-name: slide; animation-duration:
+	    5s; animation-iteration-count: infinite; animation-delay: 2s;
+	    "
+	>
+	    Button
+	</button> -->
+
+	<!-- animation-direction ---------------------------------------->
+
+	<!-- Cette propriété indique si l'animation doit alterner entre
+	deux directions de progressions (faire des allers-retours) ou
+	recommencer au début à chaque cycle de répétition. Les valeurs
+	possibles sont `normal`, `reverse`, `alternate` et
+	`alternate-reverse`. -->
+
+	<!-- Exemple ---------------------------------------------------->
+	
+	<example-block name="animation-direction">
+
+		<style>
+			@keyframes slide {
+				0% {
+					margin-top: 0;
+					color: red;
+				}
+
+				100% {
+					margin-top: 5rem;
+					color: yellow;
+				}
+			}
+
+			button {
+				animation-name: slide;
+				animation-duration: 5s;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+			}
+		</style>
+
+		<button>Button</button>
+
+	</example-block>
+
+	<!-- animation-fill-mode ---------------------------------------->
+
+	<!-- Cette propriété indique les valeurs qui doivent être
+	appliquées aux propriétés avant et après l'exécution de
+	l'animation. Les valeurs possibles sont `none`, `forwards`,
+	`backwards` et `both`. -->
+
+	<!-- Exemple ---------------------------------------------------->
+
+	<example-block name="animation-fill-mode">
+
+		<style>
+			@keyframes slide {
+				0% {
+					margin-top: 0;
+					color: red;
+				}
+
+				100% {
+					margin-top: 5rem;
+					color: yellow;
+				}
+			}
+
+			button {
+				animation-name: slide;
+				animation-duration: 2s;
+				animation-delay: 2s;
+				animation-fill-mode: forwards;
+			}
+		</style>
+
+		<button>Button</button>
+
+	</example-block>
+
+	<!-- animation-play-state --------------------------------------->
+
+	<!-- Cette propriété permet d'interrompre (« paused ») ou de
+	reprendre l'exécution d'une animation. -->
+
+	<!-- Exemple ---------------------------------------------------->
+
+	<example-block name="animation-play-state">
+
+		<style>
+			@keyframes slide {
+				0% {
+					margin-top: 0;
+					color: red;
+				}
+
+				100% {
+					margin-top: 5rem;
+					color: yellow;
+				}
+			}
+
+			button {
+				animation-name: slide;
+				animation-duration: 5s;
+				animation-iteration-count: infinite;
+			}
+
+			button:hover {
+				animation-play-state: paused;
+			}
+		</style>
+
+		<button>Button</button>
+
+	</example-block>
+
+	<!-- animation-timing-function ---------------------------------->
+
+	<!-- Cette propriété configure la fonction de minutage d'une
+	animation, autrement dit comment celle-ci accélère entre l'état
+	initial et l'état final notamment grâce à des fonctions décrivant
+	des courbes d'accélération. -->
+
+	<!-- Exemple ---------------------------------------------------->
+
+	<example-block name="animation-timing-function">
+
+		<style>
+			@keyframes slide {
+				0% {
+					margin-top: 0;
+					color: red;
+				}
+
+				100% {
+					margin-top: 5rem;
+					color: yellow;
+				}
+			}
+
+			button {
+				animation-name: slide;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				animation-timing-function: ease-in-out;
+			}
+		</style>
+
+		<button>Button</button>
+
+	</example-block>
+
+	<!--------------------------------------------------------------->
+	<!-- DÉFINIR LES ÉTAPES D'UNE ANIMATION ------------------------->
+	<!--------------------------------------------------------------->
+
+	<!-- Une fois qu'on a définit les propriétés propres à
+	l'animation, on doit définir la mise en forme qui évolue lors de
+	cette animation. Pour cela on définit deux étapes ou plus grâce à
+	la règle @keyframes. Chaque étape décrit la façon dont l'élément
+	animé doit être affiché à un instant donné lors de l'animation.
+	-->
+
+	<!-- Comme la durée de l'animation est définie en amont, la règle
+	`@keyframes` utilise des valeurs exprimées en pourcentages pour
+	indiquer l'instant correspondant à cet état. 0% indique l'état
+	initial de l'animation et 100% indique l'état final. Ces deux
+	états étant très important, il existe deux alias pour les 
+	décrire : `from` et `to`. -->
+
+	<!-- Ces états sont optionnels et si from/0% ou to/100% ne sont
+	pas définis, le navigateur utilisera les valeurs calculées des
+	différentes propriétés. -->
+
+	<!-- Il est également possible d'ajouter des étapes
+	intermédiaires, entre l'état initial et l'état final de
+	l'animation. -->
+
+	<!-- Exemple ---------------------------------------------------->
+
+	<example-block name="@keyframes">
+
+		<style>
+			@keyframes slide {
+				0% {
+					margin-top: 0;
+					color: red;
+				}
+
+				50% {
+					margin-left: 5rem;
+					color: green;
+				}
+
+				100% {
+					margin-top: 5rem;
+					color: yellow;
+				}
+			}
+
+			button {
+				animation-name: slide;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				animation-timing-function: ease-in-out;
+			}
+		</style>
+
+		<button>Button</button>
+
+	</example-block>
+
+	<!--------------------------------------------------------------->
+	<!-- RESSOURCES ------------------------------------------------->
+	<!--------------------------------------------------------------->
+
+	<!-- https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations -->
+</body>
+
+</html>

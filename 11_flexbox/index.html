@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://maxime-pigeon.github.io/example-block/example-block.js" type="module"></script>
+	<title>Flexbox</title>
+</head>
+
+<body>
+	<!------------------------------------------------------------------------->
+	<!-- FLEXBOX -------------------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Flexbox est une méthode de mise en page qui permet de disposer des
+	éléments selon un axe principal. Les éléments se dilatent ou se rétractent
+	pour occuper l'espace disponible. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			div {
+				display: flex;
+			}
+		</style>
+
+		<div>
+			<button>1</button>
+			<button>2</button>
+			<button>3</button>
+		</div>
+
+	</example-block>
+
+
+	<!------------------------------------------------------------------------->
+
+	<!-- L'élément parent dont la propriété est `display: flex` est appelé le
+	conteneur flex (flex container). Les éléments disposés en tant que boîtes
+	flexibles à l'intérieur du conteneur flex sont appelés éléments flex (flex
+	items). -->
+
+	<!-- Exemple -------------------------------------------------------------->
+	
+	<example-block>
+
+		<style>
+			div {
+				display: flex;
+				border: 1px solid black;
+				padding: 0.5rem;
+			}
+		</style>
+
+		<div>
+			<button>Élément flex</button>
+			<button>Élément flex</button>
+			<button>Élément flex</button>
+		</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- COLONNES OU LIGNE ---------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Lorsque les éléments sont disposés en boîtes flexibles, ils sont
+	disposés le long de deux axes. L'axe principal (main axis) est l'axe de la
+	direction dans laquelle sont disposés les éléments flex. L'axe croisé (cross
+	axis) est l'axe perpendiculaire à l'axe principal. Flexbox dispose de la
+	propriété `flex-direction` pour indiquer la direction de l'axe principal.
+	-->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			div {
+				display: flex;
+				flex-direction: column;
+			}
+		</style>
+
+		<div>
+			<button>Élément flex 1</button>
+			<button>Élément flex 2</button>
+			<button>Élément flex 3</button>
+		</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- ENVELOPPEMENT -------------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Quand votre conteneur est de largeur ou hauteur fixe, il arrive que les
+	éléments flex débordent. Pour y remédier, on peut utiliser la propriété
+	`flex-wrap`. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			div {
+				display: flex;
+				padding: .5rem;
+				border: 1px solid black;
+				width: 500px;
+				flex-wrap: wrap;
+			}
+
+			button {
+				min-width: 50%;
+			}
+		</style>
+
+		<div>
+			<button>Élément flex 1</button>
+			<button>Élément flex 2</button>
+			<button>Élément flex 3</button>
+		</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- TAILLE MODULABLE ----------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Examinons comment nous pouvons contrôler la proportion d'éléments
+	flexibles dans l'espace. La propriété `flex` définie la quantité d'espace
+	disponible que chaque élément flex prendra le long de l'axe principal. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			div {
+				display: flex;
+				padding: .5rem;
+				border: 1px solid black;
+			}
+
+			button:first-child {
+				flex: 1;
+			}
+
+			button:last-child {
+				flex: 2;
+			}
+		</style>
+
+		<div>
+			<button>Élément flex 1 (1/3)</button>
+			<button>Élément flex 2 (2/3)</button>
+		</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+
+	<!-- `flex` est une forme abrégée de propriété qui peut servir à définir
+	trois valeurs différentes : `flex-grow`, `flex-shrink`, `flex-basis`. Comme
+	nous avons vu ci-haut, `flex-grow` définie la quantité d'espace disponible
+	que chaque élément flex prendra le long de l'axe principal. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			div {
+				display: flex;
+				padding: .5rem;
+				border: 1px solid black;
+			}
+
+			button:first-child {
+				flex-grow: 1;
+			}
+
+			button:last-child {
+				flex-grow: 1;
+			}
+		</style>
+
+		<div>
+			<button>Élément flex 1 (1/2)</button>
+			<button>Élément flex 2 (1/2)</button>
+		</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+
+	<!-- `flex-shrink` indique la quantité de dépassement à retirer de
+	l'extension de chacun des éléments flex pour les empêcher de déborder du
+	conteneur. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			div {
+				display: flex;
+				padding: .5rem;
+				border: 1px solid black;
+				width: 500px;
+			}
+
+			button {
+				width: 500px;
+			}
+
+			button:first-child {
+				flex-shrink: 1;
+			}
+
+			button:last-child {
+				flex-shrink: 2;
+			}
+		</style>
+
+		<div>
+			<button>Élément flex 1</button>
+			<button>Élément flex 2</button>
+		</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+
+	<!-- Pour faire simple, `flex-basis` équivaut à `width` et `height` (selon
+	la direction de l'axe principal). -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			div {
+				display: flex;
+				padding: .5rem;
+				border: 1px solid black;
+				width: 500px;
+			}
+
+			button {
+				flex-basis: 500px;
+			}
+
+			button:first-child {
+				flex-shrink: 1;
+			}
+
+			button:last-child {
+				flex-shrink: 2;
+			}
+		</style>
+
+		<div>
+			<button>Élément flex 1</button>
+			<button>Élément flex 2</button>
+		</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- ALIGNEMENT ----------------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- AXE PRINCIPAL -------------------------------------------------------->
+
+	<!-- `justify-content` fixe où les éléments flex sont placés sur l'axe
+	principal. La valeur par défaut est `flex-start` : tous les éléments
+	sont disposés à partir de l'origine de l'axe principal. `flex-end` permet de
+	les disposer à partir de la fin. `center` permet de les centrer. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+	
+	<example-block>
+
+		<style>
+			div {
+				display: flex;
+				border: 1px solid black;
+				padding: 0.5rem;
+				justify-content: center;
+			}
+		</style>
+
+		<div>
+			<button>Élément flex</button>
+			<button>Élément flex</button>
+			<button>Élément flex</button>
+		</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+
+	<!-- La valeur `space-around` distribue régulièrement tous les éléments le
+	long de l'axe principal, en laissant autant d'espace à chaque extrémité
+	qu'entre chacun. La valeur `space-between` est semblable à space-around,
+	mais elle ne laisse pas d'espace aux extrémités. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			div {
+				display: flex;
+				border: 1px solid black;
+				padding: 0.5rem;
+				justify-content: space-around;
+			}
+		</style>
+
+		<div>
+			<button>Élément flex</button>
+			<button>Élément flex</button>
+			<button>Élément flex</button>
+		</div>
+
+	</example-block>
+
+	<!-- AXE CROISÉ ----------------------------------------------------------->
+
+	<!-- `align-items` fixe là où les éléments flex sont placés sur l'axe
+	croisé. Par défaut, la valeur est `stretch`, qui étire tous les éléments
+	flex de manière à emplir le conteneur. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			div {
+				display: flex;
+				border: 1px solid black;
+				padding: 0.5rem;
+				align-items: stretch;
+				
+			}
+
+			button:first-child {
+				height: 5rem;
+			}
+		</style>
+
+		<div>
+			<button>Élément flex</button>
+			<button>Élément flex</button>
+			<button>Élément flex</button>
+		</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+
+	<!-- Avec la valeur `center`, les éléments gardent leur dimension
+	intrinsèque, tout en étant centrés sur l'axe croisé.  -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			div {
+				display: flex;
+				border: 1px solid black;
+				padding: 0.5rem;
+				align-items: center;
+				
+			}
+
+			button:first-child {
+				height: 5rem;
+			}
+		</style>
+
+		<div>
+			<button>Élément flex</button>
+			<button>Élément flex</button>
+			<button>Élément flex</button>
+		</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+
+	<!-- `flex-start` et `flex-end` alignent respectivement tous les
+	éléments au début ou à la fin de l'axe croisé. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			div {
+				display: flex;
+				border: 1px solid black;
+				padding: 0.5rem;
+				align-items: flex-start;
+				
+			}
+
+			button:first-child {
+				height: 5rem;
+			}
+		</style>
+
+		<div>
+			<button>Élément flex</button>
+			<button>Élément flex</button>
+			<button>Élément flex</button>
+		</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+
+	<!-- Vous pouvez contrôler le comportement de `align-items` pour un seul
+	élément flex donné en lui appliquant la propriété `align-self`. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+		<style>
+			div {
+				display: flex;
+				border: 1px solid black;
+				padding: 0.5rem;
+				
+			}
+
+			button:first-child {
+				height: 5rem;
+			}
+
+			button:nth-child(2) {
+				align-self: flex-start;
+			}
+
+			button:last-child {
+				align-self: center;
+			}
+		</style>
+
+		<div>
+			<button>Élément flex</button>
+			<button>Élément flex</button>
+			<button>Élément flex</button>
+		</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- ESPACEMENT ----------------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- La propriété `gap` permet de créer un espace entre chaque élément
+	flex. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+		<style>
+			div {
+				display: flex;
+				border: 1px solid black;
+				padding: 0.5rem;
+				gap: 1rem;
+				
+			}
+		</style>
+
+		<div>
+			<button>Élément flex</button>
+			<button>Élément flex</button>
+			<button>Élément flex</button>
+		</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- RESSOURCES ----------------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- https://developer.mozilla.org/fr/docs/Learn/CSS/CSS_layout/Flexbox
+	-->
+	<!-- https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/ -->
+</body>
+
+</html>

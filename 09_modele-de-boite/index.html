@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://maxime-pigeon.github.io/example-block/example-block.js" type="module"></script>
+	<title>Modèle de boîte</title>
+</head>
+
+<body>
+	<!------------------------------------------------------------------------->
+	<!-- BOÎTE EN LIGNE ------------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Les éléments <a>, utilisés pour les liens, ou encore <span>, <em> et
+	<strong> sont tous des éléments qui s'affichent « en ligne » par défaut. La
+	boîte ne crée pas de retour à la ligne ; les autres éléments se suivent donc
+	en ligne. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+	
+	<example-block>
+
+		<a href="/">Ceci est un élément a.</a>
+		<strong>Ceci est un élément strong.</strong>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+
+	<!-- Les propriétés de largeur (width) et de hauteur (height) ne
+	s'appliquent pas. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			a {
+				background-color: yellow;
+				height: 1rem;
+				width: 10rem;
+			}
+		</style>
+	
+		<a href="/">Ceci est un a.</a>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+
+	<!-- Le padding , les marges et les bordures *verticales* (en haut et en
+	bas) seront appliquées mais ne provoqueront pas de déplacement des éléments
+	alentours. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			span {
+				background-color: yellow;
+				padding: 1rem 0;
+			}
+		</style>
+	
+		<p>
+			Lorem ipsum <span>dolor</span> sit amet consectetur adipisicing
+			elit. Nesciunt consequuntur magnam exercitationem omnis, vitae velit
+			quam recusandae rerum quos quisquam fugiat, quis porro expedita, rem
+			numquam voluptatibus? Minus, labore incidunt.
+		</p>
+	
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+
+	<!-- Le padding, les marges et les bordures *horizontales* (à gauche et à
+	droite) seront appliquées et provoqueront le déplacement des éléments
+	alentours. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			span {
+				background-color: yellow;
+				padding: 0 1rem;
+			}
+		</style>
+	
+		<p>
+			Lorem ipsum <span>dolor</span> sit amet consectetur adipisicing
+			elit. Nesciunt consequuntur magnam exercitationem omnis, vitae velit
+			quam recusandae rerum quos quisquam fugiat, quis porro expedita, rem
+			numquam voluptatibus? Minus, labore incidunt.
+		</p>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- BOÎTE EN BLOC -------------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Les titres (<h1>, <h2>, etc.) et les paragraphes (<p>) utilisent le
+	mode « bloc » comme propriété de positionnement extérieur par défaut. La
+	boîte s'étend en largeur pour remplir totalement l'espace offert par son
+	conteneur. -->
+	
+	<!-- Dans la plupart des cas, la boîte devient alors aussi large que son
+	conteneur, occupant 100% de l'espace disponible. La boîte occupe donc sa
+	propre nouvelle ligne et crée un retour à la ligne, faisant ainsi passer les
+	éléments suivants à la ligne d'après. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			p {
+				background-color: yellow;
+			}
+		</style>
+	
+		<p>Ceci est un premier paragraphe.</p>
+		<p>Ceci est un deuxième paragraphe.</p>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+
+	<!-- Les propriétés de largeur (width) et de hauteur (height) sont toujours
+	respectées. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			div {
+				background-color: yellow;
+				width: 500px;
+				height: 100px;
+			}
+		</style>
+	
+		<div>Je suis un div. Ma vie n'a aucun sens.</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+
+	<!-- Les propriétés padding, margin et border auront pour effet de repousser
+	les autres éléments. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			p {
+				background-color: yellow;
+				padding: 1rem 0;
+			}
+		</style>
+
+		<p>Je suis un paragraphe.</p>
+		<p>Moi aussi !</p>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- POSITIONNEMENT INTÉRIEUR --------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Les boîtes ont aussi un type de positionnement intérieur qui décrit le
+	comportement de mise en page des éléments contenus dans la boîte.  -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			div {
+				display: flex;
+			}
+		</style>
+
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta autem
+			vel velit quo nostrum incidunt nulla dignissimos impedit, rerum
+			excepturi totam reiciendis soluta voluptatibus consequuntur
+			cupiditate explicabo cumque magni obcaecati.
+		</p>
+		<div>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+				molestias natus praesentium minus molestiae nemo consequuntur
+				odit quia eligendi cumque. Cumque, quas? Dolorum eum accusamus
+				voluptatem, unde vitae exercitationem repudiandae!
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Recusandae, sed ex dolores natus nam tempore! Quis quos,
+				recusandae a voluptates cumque, rem nihil vel fugit et dicta
+				quidem porro commodi!
+			</p>
+		</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- RESSOURCES ----------------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model -->
+
+</body>
+
+</html>

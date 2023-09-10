@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://maxime-pigeon.github.io/example-block/example-block.js" type="module"></script>
+	<style>
+		body {
+			height: 200vh;
+		}
+	</style>
+	<title>Positionnement</title>
+</head>
+
+<body>
+	<!------------------------------------------------------------------------->
+	<!-- STATIQUE ------------------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Le positionnement statique est celui par défaut. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			p {
+				position: static;
+			}
+		</style>
+
+		<button>Bouton statique</button>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- RELATIF -------------------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Le positionnement relatif permet de modifier la position *finale* d'un
+	élément grâce aux propriétés top, bottom, left et right. L'élément occupe
+	une place dans le cours normal de la mise en page. -->
+	
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			button:first-of-type {
+				position: relative;
+				left: 1rem;
+			}
+		</style>
+
+		<button>Bouton relatif</button>
+		<button>Bouton</button>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- ABSOLU --------------------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Un élément positionné de manière absolue ne fait plus partie du cours
+	normal de la mise en page. Il se trouve maintenant sur un plan qui lui est
+	propre, séparé de tout le reste. -->
+
+	<!-- top, bottom, left et right se comportent différemment avec le
+	positionnement absolu. Au lieu de positionner l'élément en fonction de sa
+	position relative dans la mise en page du document, ils définissent la
+	distance à laquelle l'élément doit se situer par rapport aux côtés de
+	l'élément contenant. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			div {
+				padding: 1rem;
+				border: 1px solid red;
+			}
+
+			button:first-of-type {
+				position: absolute;
+				top: 0;
+				left: 50%;
+			}
+		</style>
+
+		<div>
+			<button>Bouton absolu (hors du cours normal)</button>
+			<button>Bouton (dans le cours normal)</button>
+		</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+
+	<!-- Vous pouvez modifier le contexte de positionnement, c'est-à-dire
+	l'élément par rapport auquel l'élément est positionné de façon absolue. Pour
+	cela, on définira le positionnement d'un des éléments ancêtres. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			div {
+				padding: 1rem;
+				border: 1px solid blue;
+				position: relative;
+			}
+
+			button:first-of-type {
+				position: absolute;
+				top: 0;
+				left: 50%;
+			}
+		</style>
+
+		<div>
+			<button>Bouton absolu (hors du cours normal)</button>
+			<button>Bouton (dans le cours normal)</button>
+		</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- FIXE ----------------------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Le positionnement fixe fonctionne de la même manière que le
+	positionnement absolu, mais par rapport à la fenêtre du navigateur. Tout
+	comme un élément positionné de manière absolue, un élément fixe ne fait plus
+	partie du cours normal de la mise en page. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			button:first-of-type {
+				position: fixed;
+				right: 0;
+				bottom: 0;
+			}
+		</style>
+
+		<button>Bouton fixe (hors du cours normal)</button>
+		<button>Bouton (dans le cours normal)</button>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- ADHÉRENT (STICKY) ---------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- Le positionnement adhérent est un hybride entre le positionnement
+	relative et fixe : l'élément est en positionnement relatif jusqu'à un
+	certain seuil, seuil au-delà duquel il est en positionnement fixe. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+
+	<example-block>
+
+		<style>
+			div {
+				border: 1px solid gray;
+				padding: 1rem;
+				height: 50vh;
+			}
+
+			nav {
+				background-color: gainsboro;
+				padding: 1rem;
+				margin: 1rem 0;
+				position: sticky;
+				top: 0;
+			}
+		</style>
+
+		<div>
+			<nav>
+				Je suis une barre de navigation adhérente.
+			</nav>
+			<nav>
+				Je suis une deuxième barre de navigation adhérente.
+			</nav>
+		</div>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- Z-INDEX -------------------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+
+	<!-- « z-index » est une référence à l'axe z. Les valeurs de z-index
+	affectent donc l'emplacement des éléments positionnés sur cet axe. -->
+
+	<!-- Exemple -------------------------------------------------------------->
+	
+	<example-block>
+
+		<style>
+			button:first-of-type {
+				position: relative;
+				right: -1rem;
+				z-index: -1;
+			}
+		</style>
+
+		<button>1</button>
+		<button>2</button>
+
+	</example-block>
+
+	<!------------------------------------------------------------------------->
+	<!-- RESSOURCES ----------------------------------------------------------->
+	<!------------------------------------------------------------------------->
+
+	<!-- https://developer.mozilla.org/fr/docs/Learn/CSS/CSS_layout/Positioning
+	-->
+</body>
+
+</html>

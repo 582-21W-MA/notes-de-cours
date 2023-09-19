@@ -8,5 +8,5 @@ Vous trouverez dans le fichier `lois-gestalt.jam` ci-inclus des examples visuels
 
 ## Ressources supplémentaires
 
-- [Gestalt Principles for UI Design (vidéos)](https://www.youtube.com/playlist?list=PLJOFJ3Ok_iduObD_9dHwiYp804oZwpHze)
-- [Max Wertheimer : *Investigations on Gestalt Principles* (facultatif)](https://g-e-s-t-a-l-t.org/media/pdf/Investigations-on-Gestalt-Principles.pdf)
+- [Gestalt Principles for UI Design](https://www.youtube.com/playlist?list=PLJOFJ3Ok_iduObD_9dHwiYp804oZwpHze)
+- [Max Wertheimer : *Investigations on Gestalt Principles*](https://g-e-s-t-a-l-t.org/media/pdf/Investigations-on-Gestalt-Principles.pdf)

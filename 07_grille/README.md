@@ -6,7 +6,7 @@ Une grille est composée d'axes verticaux et horizontaux qui se croisent de sort
 
 Afin de créer un rythme visuel constant, une seule grille est utilisée pour toutes les pages. La taille des éléments (c'est-à-dire le nombre de champs qu'ils remplissent) peut toutefois variée.
 
-## Ligne de base
+## Ligne et mesure de base
 
 La ligne de base est le trait imaginaire qui longe la partie basse des lettres sans tenir compte de leur jambage inférieur. À l'imprimé, il est coutume d'asseoir tous les éléments de la page sur la même ligne de base afin de créer un rythme vertical constant. Les paragraphes, les titres et les images ont ainsi une hauteur qui se divise par la hauteur de la ligne de base.
 

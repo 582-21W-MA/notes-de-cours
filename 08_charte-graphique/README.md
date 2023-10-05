@@ -1,0 +1,5 @@
+# Charte graphique
+
+Une charte graphique est un document qui codifie le langage visuel d'une organisation. Elle définie les conditions d'utilisation du logo, les attributs typographiques à utiliser, le choix des couleurs, la mise en page des documents, les types d'illustration et de photo, et l'ensemble des éléments graphiques utilisés sur les supports de communication digitaux et imprimés. Elle comprend aussi des principes ou des valeurs sur lesquelles s'appuyer lors de la conception afin de refléter la vision de l'organisation.
+
+L'intérêt d'un tel document est de pouvoir s'y reporter à chaque fois qu'une nouvelle création visuelle est nécessaire. Cela permet de maintenir une harmonie et une cohérence dans la communication visuelle d'une organisation, indépendamment du support utilisé et du graphiste en charge de la création.

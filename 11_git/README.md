@@ -6,11 +6,11 @@ Git est un gestionnaire de versions ; un système qui enregistre l'évolution de
 
 Git fonctionne à la manière d'un **flux d'instantanés** (ou de clichés photographiques). À chaque fois que vous validez ou enregistrez (*commit*) l'état d'un projet, Git prend un instantané du contenu de votre espace de travail, et enregistre une référence à cet instantané. Il est ensuite possible de comparer l'état du projet entre deux instantanés, ou bien rétablir le projet à l'état d'un instantané précédent.
 
-## 1. Les trois sections de Git
+## 1. Les trois états de Git
 
 ![Les trois sections de Git](images/trois-sections.png)
 
-Un projet Git (aussi appelé **dépôt**) contient trois sections principales, soit trois « endroits » où peuvent se trouver les fichiers en fonction de leur état à un moment donné : la **copie de travail** (*working copy*), la **zone d'index** (*staging area*), et le **répertoire Git** (*Git directory*).
+Un projet Git (aussi appelé **dépôt**) contient trois états principaux, soit trois « endroits » où peuvent se trouver les fichiers en fonction de leur état à un moment donné : la **copie de travail** (*working copy*), la **zone d'index** (*staging area*), et le **répertoire Git** (*Git directory*).
 
 L'utilisation de Git se passe normalement comme suit :
 

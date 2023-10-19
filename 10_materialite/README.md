@@ -14,8 +14,6 @@ Dans son livre *Responsive Web Design*, Ethan Marcotte qualifie cette nouvelle f
 
 Heureusement, le Web est adaptatif *par défaut*. Prenez le paragraphe précédent, copiez-le dans un fichier HTML, et ouvrez celui-ci dans un navigateur Web. Vous remarquerez que la taille du texte s'adapte à la largeur de la fenêtre, et ce, sans avoir à changer la présentation du document avec CSS. Il en va de même pour la majorité des éléments HTML ; ils sont naturellement fluides. Concevoir une page Web adaptative nécessite peu ou pas de travail supplémentaire si le design de celle-ci est pensé de sorte à intégrer cette caractéristique innée du Web.
 
-Les difficultés apparaissent lorsqu'une page Web est pensée comme si elle avait une taille fixe
-
 
 ## Ressources
 

@@ -17,6 +17,13 @@
 
 <example-block name="1.1">
 
+	<style>
+		p {
+			position: static;
+		}
+	</style>
+
+	<button>Bouton statique</button>
 
 </example-block>
 
@@ -33,6 +40,16 @@ L'élément occupe une place dans le cours normal de la mise en page.
 
 <example-block name="2.1">
 
+	<style>
+		button:first-of-type {
+			position: relative;
+			left: 75%;
+			top: 0.5rem;
+		}
+	</style>
+
+	<button>Bouton relatif (dans le cours normal)</button>
+	<button>Bouton statique (dans le cours normal)</button>
 
 </example-block>
 
@@ -54,6 +71,26 @@ rapport aux côtés de l'élément contenant. -->
 
 <example-block name="3.1">
 
+	<style>
+		div {
+			padding: 1rem;
+			border: 1px solid red;
+		}
+
+		button:first-of-type {
+			position: absolute;
+			top: 0;
+			left: 50%;
+		}
+	</style>
+
+	<div>
+		<button>
+			Bouton absolu (hors du cours normal). Je fais partie de
+			l'exemple 3.1, mais je suis perdu !
+		</button>
+		<button>Bouton statique (dans le cours normal)</button>
+	</div>
 
 </example-block>
 
@@ -68,6 +105,24 @@ ancêtres. -->
 
 <example-block name="3.2">
 
+	<style>
+		div {
+			padding: 1rem;
+			border: 1px solid blue;
+			position: relative;
+		}
+
+		button:first-of-type {
+			position: absolute;
+			top: 0;
+			left: 50%;
+		}
+	</style>
+
+	<div>
+		<button>Bouton absolu (hors du cours normal)</button>
+		<button>Bouton statique (dans le cours normal)</button>
+	</div>
 
 </example-block>
 
@@ -84,6 +139,19 @@ fixe ne fait plus partie du cours normal de la mise en page. -->
 
 <example-block name="4.1">
 
+	<style>
+		button:first-of-type {
+			position: fixed;
+			right: 0;
+			bottom: 0;
+		}
+	</style>
+
+	<button>
+		Bouton fixe (hors du cours normal). Je fait parti de
+		l'exemple 4.1, mais je suis perdu !
+	</button>
+	<button>Bouton statique (dans le cours normal)</button>
 
 </example-block>
 
@@ -100,6 +168,40 @@ positionnement fixe. -->
 
 <example-block name="5.1">
 
+	<style>
+		div {
+			height: 100vh;
+		}
+
+		nav {
+			background-color: gainsboro;
+			border: 1px solid;
+			padding: 1rem;
+			margin-bottom: 5rem;
+			position: sticky;
+			top: 0;
+		}
+	</style>
+
+	<div>
+		<nav>
+			Je suis une barre de navigation adhérente.
+		</nav>
+		<nav>
+			Je suis une deuxième barre de navigation adhérente.
+		</nav>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Donec tellus leo, auctor vel risus ac, rhoncus mollis
+			metus. Nam laoreet, leo nec finibus pulvinar, ante mi
+			iaculis velit, eget maximus ipsum velit in enim. Cras
+			nulla purus, gravida ac justo vel, luctus volutpat
+			augue. Mauris id neque nisl. Aliquam ultricies elit ac
+			condimentum eleifend. Donec sed tellus magna. Quisque at
+			leo nec tortor interdum venenatis. Mauris bibendum dolor
+			quis neque congue eleifend. Aliquam non vulputate massa.
+		</p>
+	</div>
 
 </example-block>
 
@@ -115,6 +217,16 @@ cet axe. -->
 
 <example-block name="6.1">
 
+	<style>
+		button:first-of-type {
+			position: relative;
+			right: -1rem;
+			z-index: -1;
+		}
+	</style>
+
+	<button>1</button>
+	<button>2</button>
 
 </example-block>
 

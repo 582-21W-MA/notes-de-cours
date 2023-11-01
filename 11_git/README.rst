@@ -1,8 +1,8 @@
+.. section-numbering::
+
 ======================================================================
 Git
 ======================================================================
-
-.. contents:: Table des matières
 
 .. image:: images/flux-d-instantanes.png
    :alt: Flux d'instantanés
@@ -37,8 +37,8 @@ L'utilisation de Git se passe normalement comme suit :
 
 1. Vous modifiez des fichiers dans votre copie de travail.
 2. Vous ajoutez les fichiers modifiés à la zone d'index avec la
-   commande `git add`.
-3. Vous validez vos changements avec `git commit`, ce qui
+   commande ``git add``.
+3. Vous validez vos changements avec ``git commit``, ce qui
    enregistre l'instantané dans la base de données du répertoire Git.
 
 
@@ -55,29 +55,26 @@ Initialiser un nouveau dépôt
 
 Si vous commencez un nouveau projet, ou que vous désirez adopter
 un gestionnaire de version pour un projet existant, il suffit de se
-positionner dans celui-ci avec une interface en lignes de commandes :
+positionner dans celui-ci avec une interface en lignes de commandes ::
 
-.. code:: shell
+    cd chemin/vers/le/répertoire
 
-   cd chemin/vers/le/répertoire
+Et d'exécuter ensuite la commande suivante ::
 
-Et d'exécuter ensuite la commande suivante :
-
-.. code:: shell
-
-   git init
+    git init
 
 Cela crée un nouveau sous-répertoire caché[#]_ nommé « .git »
 qui contient tous les fichiers nécessaires au dépôt.
 
 .. [#] Comme leur nom l'indique, les fichiers et les dossiers cachées
-       dont le nom débute par un point `.` ne sont pas visibles par
-       défaut dans votre gestionnaire de fichiers. Sur Mac, dans
-       l'application Finder, la commande `command + shit + .` affiche
-       les fichiers et les dossiers cachées. Sur Windows, dans File
-       Explorer, l'option ce trouve sous `View > Show > Hidden items`.
-       Dans VS Code, l'option qui contrôle l'affichage des fichiers
-       et des dossiers cachés s'appelle « Files: Exclude ».
+       dont le nom débute par un point ``.`` ne sont pas visibles
+       par défaut dans votre gestionnaire de fichiers. Sur Mac,
+       dans l'application Finder, la commande ``command + shit
+       + .`` affiche les fichiers et les dossiers cachées. Sur
+       Windows, dans File Explorer, l'option ce trouve sous ``View >
+       Show > Hidden items``. Dans VS Code, l'option qui contrôle
+       l'affichage des fichiers et des dossiers cachés s'appelle
+       « Files: Exclude ».
 
 
 Cloner un dépôt existant
@@ -129,14 +126,14 @@ Cycle de vie des fichiers
 Les fichiers de la copie de travail peuvent avoir différents états
 selon l'étape du cycle de vie dans lequel ils se trouvent. L'outil
 principal pour déterminer quels fichiers sont dans quel état est
-la commande `git status`, ou `git status -s` pour un affichage
+la commande ``git status``, ou ``git status -s`` pour un affichage
 simplifié.
 
 Non suivi
     Un fichier est « non suivi » s'il ne fait pas parti du dernier
     instantané (*commit*). On peut l'ajouter à l'index avec la
-    commande `git add chemin/vers/le/fichier`, ou `git add .` pour
-    indexer tous les fichiers non suivis.
+    commande ``git add chemin/vers/le/fichier``, ou ``git add .``
+    pour indexer tous les fichiers non suivis.
 
 Suivi
     Un fichier est « suivi » s'il fait parti du dernier instantané,
@@ -152,12 +149,12 @@ Modifié
 
 Indexé
     Un fichier indexé est un fichier modifié qui a été ajouté à
-    la zone d'index avec la commande `git add`. Un fichier indexé est
-    prêt à être valider.
+    la zone d'index avec la commande ``git add``. Un fichier indexé
+    est prêt à être valider.
 
 Validé
     Enfin, tous les fichiers indexés sont validés lorsqu'un nouvel
-    instantané est enregistré avec la commande `git commit`. Une
+    instantané est enregistré avec la commande ``git commit``. Une
     fois validé, le fichier retourne automatiquement à l'état «
     suivi » en attendant de nouveaux changements.
 
@@ -198,7 +195,7 @@ Visualiser l'historique des validations
 
 Après avoir créé plusieurs *commits*, ou si vous avez cloné un
 dépôt préexistant, il est possible de visualiser l'historique des
-validations. Pour ce faire, on exécute la commande `git log`.
+validations. Pour ce faire, on exécute la commande ``git log``.
 
 Un historique Git ressemble généralement à ceci ::
 
@@ -251,13 +248,13 @@ Ignorer des fichiers
 --------------------
 
 Certains fichiers ne sont pas pertinents à indexer. C'est le cas,
-par exemple, des fichiers `.DS_Store` sur Mac, des dossiers de
-configuration `.vscode`, des dossiers `node_modules`, et de tous
+par exemple, des fichiers ``.DS_Store`` sur Mac, des dossiers de
+configuration ``.vscode``, des dossiers ``node_modules``, et de tous
 autres fichiers personnels ou confidentiels.
 
 On peut énumérer les patrons de noms des fichiers et des
-répertoires à ignorer dans un fichier `.gitignore`. Voici un exemple
-de fichier `.gitignore` typique ::
+répertoires à ignorer dans un fichier ``.gitignore``. Voici un
+exemple de fichier ``.gitignore`` typique ::
 
     # System files
     # ------------
@@ -291,13 +288,13 @@ Afficher les dépôts distants
 ----------------------------
 
 Pour visualiser les dépôts distants associés à un dépôt local,
-on utilise la commande `git remote`. Si vous exécutez `git remote`
-dans le présent dépôt, vous devriez voir « origin » — le nom
-donné par défaut au dépôt distant à partir duquel vous avez
-cloné votre projet Git.
+on utilise la commande ``git remote``. Si vous exécutez ``git
+remote`` dans le présent dépôt, vous devriez voir « origin » —
+le nom donné par défaut au dépôt distant à partir duquel vous
+avez cloné votre projet Git.
 
-Vous pouvez aussi ajouter l'option `-v` à la commande `git remote`
-pour voir l'URL des dépôts distants.
+Vous pouvez aussi ajouter l'option ``-v`` à la commande ``git
+remote`` pour voir l'URL des dépôts distants.
 
 Ajouter et retirer des dépôts distants
 --------------------------------------
@@ -322,13 +319,13 @@ Tirer et pousser son travail
 Si vous avez cloné votre dépôt, celui-ci est automatiquement
 configuré pour suivre les changements du dépôt distant duquel vous
 l'avez cloné. Pour tirer (*pull*) ces changements et les appliquer
-à votre dépôt local, il faut exécuter la commande `git pull`.
+à votre dépôt local, il faut exécuter la commande ``git pull``.
 Attention, pour éviter les conflits, assurez-vous que votre dépôt
 local est « propre » avant de tirer des changements.
 
 Inversement, lorsque votre dépôt contient des *commits* que vous
 désirez partager, il faut les pousser (*push*) en amont. La commande
-pour le faire est `git push`. Attention, votre dépôt local doit
+pour le faire est ``git push``. Attention, votre dépôt local doit
 être à jour avec le dépôt distant pour pouvoir poussez vers ce
 dernier.
 
@@ -337,6 +334,6 @@ Ressources
 ======================================================================
 
 - `Pro Git (livre de référence)
-  <https://www.git-scm.com/book/en/v2>_
+  <https://www.git-scm.com/book/en/v2>`_
 - `Missing Semester: Version Control
-   <https://missing.csail.mit.edu/2020/version-control/>_
+   <https://missing.csail.mit.edu/2020/version-control/>`_

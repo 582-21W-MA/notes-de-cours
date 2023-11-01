@@ -7,7 +7,7 @@ Git
 .. image:: images/flux-d-instantanes.png
    :alt: Flux d'instantanés
 
-Git est un gestionnaire de versions ; un système qui enregistre
+Git est un gestionnaire de versions; un système qui enregistre
 l'évolution de fichiers dans le temps. Il vous permet de ramener un
 fichier ou un projet complet à un état précédent, de visualiser
 les changements, de voir qui a modifié quoi quand, et plus encore.
@@ -55,11 +55,11 @@ Initialiser un nouveau dépôt
 
 Si vous commencez un nouveau projet, ou que vous désirez adopter
 un gestionnaire de version pour un projet existant, il suffit de se
-positionner dans celui-ci avec une interface en lignes de commandes ::
+positionner dans celui-ci avec une interface en lignes de commandes::
 
     cd chemin/vers/le/répertoire
 
-Et d'exécuter ensuite la commande suivante ::
+Et d'exécuter ensuite la commande suivante::
 
     git init
 
@@ -87,17 +87,15 @@ ordinateur.
 
 Pour ce faire, positionnez-vous à l'endroit où vous désirez placer
 le dépôt, et exécuter la commande suivante avec une interface en
-lignes de commandes :
+lignes de commandes::
 
-.. code:: shell
-
-   git clone url/du/dépôt
+    git clone url/du/dépôt
 
 Ceci crée un nouveau répertoire, initialise un sous-répertoire
 « .git » à l'intérieur, récupère toutes les données du dépôt, et
 extrait une copie de travail de la dernière version.
 
-.. ATTENTION::
+.. NOTE::
 
    *Cloner* un dépôt n'est pas la même chose que le
    *télécharger*. Sur GitHub, par exemple, télécharger un dépôt
@@ -164,7 +162,7 @@ Valider des modifications
 
 Une fois que que la zone d'index contient tous les fichiers que vous
 désirez valider, il est temps d'enregistrer un instantané. La
-manière la plus simple est d'exécuter la commande suivante ::
+manière la plus simple est d'exécuter la commande suivante::
 
     git commit -m "Message de validation"
 
@@ -174,18 +172,18 @@ celui-ci à l'impératif, en suivant la formule : « Si appliqués,
 mon *commit* va ... [message] »
 
 Par exemple, voici le message de validation pour un *commit* qui
-contient des corrections pour le présent fichier ::
+contient des corrections pour le présent fichier::
 
     git commit -m "Corriger fautes d'orthographe dans README.md"
 
 Ou bien, voici le message de validation pour la soumission d'un
-travail pratique ::
+travail pratique::
 
     git commit -m "Soumettre le TP pour la correction"
 
 Enfin, voici un message de validation pour un *commit* qui tente
 de résoudre une erreur soulevée par l'enseignant·e lors de la
-correction ::
+correction::
 
     git commit -m "Corriger lien/vers/le/commentaire"
 
@@ -197,7 +195,7 @@ Après avoir créé plusieurs *commits*, ou si vous avez cloné un
 dépôt préexistant, il est possible de visualiser l'historique des
 validations. Pour ce faire, on exécute la commande ``git log``.
 
-Un historique Git ressemble généralement à ceci ::
+Un historique Git ressemble généralement à ceci::
 
     commit ca82a6dff817ec66f44342007202690a93763949
     Author: Scott Chacon <schacon@gee-mail.com>
@@ -233,13 +231,13 @@ notre projet aux différentes étapes de son existence. Pour ce faire,
 il faut d'abord s'assurer que notre copie de travail est « propre »,
 c'est-à-dire qu'elle ne contient aucun fichiers modifiés. Si c'est
 le cas, on peut exécuter la commande suivante pour rétablir notre
-copie de travail à un *commit* donné ::
+copie de travail à un *commit* donné::
 
     git checkout ID-du-commit
 
 N'oubliez pas de revenir dans le présent avant de créer de nouveaux
 *commits*. Pour ramener votre copie de travail à la dernière
-validation effectuée, il faut exécuter la commande suivante ::
+validation effectuée, il faut exécuter la commande suivante::
 
     git checkout main
 
@@ -254,7 +252,7 @@ autres fichiers personnels ou confidentiels.
 
 On peut énumérer les patrons de noms des fichiers et des
 répertoires à ignorer dans un fichier ``.gitignore``. Voici un
-exemple de fichier ``.gitignore`` typique ::
+exemple de fichier ``.gitignore`` typique::
 
     # System files
     # ------------
@@ -278,7 +276,7 @@ Travailler avec des dépôts distants
 
 Pour pouvoir collaborer sur un projet Git, il est nécessaire de
 savoir comment gérer les dépôts distants. Les dépôts distants
-sont des versions de votre projet qui sont « ailleurs » ; sur
+sont des versions de votre projet qui sont « ailleurs »; sur
 Internet, sur le réseau d'une organisation, ou même sur votre
 ordinateur. Collaborer avec d'autres personnes consiste à gérer ces
 dépôts distants, en poussant ou tirant des données depuis et vers
@@ -301,11 +299,11 @@ Ajouter et retirer des dépôts distants
 
 Pour ajouter un dépôt distant à votre projet Git, il suffit
 d'exécuter la commande suivante à l'intérieur de votre dépôt
-local ::
+local::
 
     git remote add [nom] [url]
 
-Pour retirer un dépôt distant, on utilise la commande suivante ::
+Pour retirer un dépôt distant, on utilise la commande suivante::
 
     git remote rm [nom]
 
@@ -336,4 +334,4 @@ Ressources
 - `Pro Git (livre de référence)
   <https://www.git-scm.com/book/en/v2>`_
 - `Missing Semester: Version Control
-   <https://missing.csail.mit.edu/2020/version-control/>`_
+  <https://missing.csail.mit.edu/2020/version-control/>`_

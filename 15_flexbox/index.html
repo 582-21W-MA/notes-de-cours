@@ -20,6 +20,17 @@ se rétractent pour occuper l'espace disponible. -->
 
 <example-block name="1.1">
 
+	<style>
+		div {
+			display: flex;
+		}
+	</style>
+
+	<div>
+		<button>1</button>
+		<button>2</button>
+		<button>3</button>
+	</div>
 
 </example-block>
 
@@ -35,6 +46,19 @@ appelés éléments flex (flex items). -->
 
 <example-block name="1.2">
 
+	<style>
+		div {
+			display: flex;
+			border: 1px solid black;
+			padding: 0.5rem;
+		}
+	</style>
+
+	<div>
+		<button>Élément flex</button>
+		<button>Élément flex</button>
+		<button>Élément flex</button>
+	</div>
 
 </example-block>
 
@@ -53,6 +77,18 @@ indiquer la direction de l'axe principal. -->
 
 <example-block name="2.1">
 
+	<style>
+		div {
+			display: flex;
+			flex-direction: column;
+		}
+	</style>
+
+	<div>
+		<button>Élément flex 1</button>
+		<button>Élément flex 2</button>
+		<button>Élément flex 3</button>
+	</div>
 
 </example-block>
 
@@ -68,6 +104,25 @@ la propriété `flex-wrap`. -->
 
 <example-block name="3.1">
 
+	<style>
+		div {
+			display: flex;
+			padding: .5rem;
+			border: 1px solid black;
+			width: 500px;
+			flex-wrap: wrap;
+		}
+
+		button {
+			min-width: 50%;
+		}
+	</style>
+
+	<div>
+		<button>Élément flex 1</button>
+		<button>Élément flex 2</button>
+		<button>Élément flex 3</button>
+	</div>
 
 </example-block>
 
@@ -84,6 +139,26 @@ long de l'axe principal. -->
 
 <example-block name="4.1">
 
+	<style>
+		div {
+			display: flex;
+			padding: .5rem;
+			border: 1px solid black;
+		}
+
+		button:first-child {
+			flex: 1;
+		}
+
+		button:last-child {
+			flex: 2;
+		}
+	</style>
+
+	<div>
+		<button>Élément flex 1 (1/3)</button>
+		<button>Élément flex 2 (2/3)</button>
+	</div>
 
 </example-block>
 
@@ -99,6 +174,26 @@ long de l'axe principal. -->
 
 <example-block name="4.2">
 
+	<style>
+		div {
+			display: flex;
+			padding: .5rem;
+			border: 1px solid black;
+		}
+
+		button:first-child {
+			flex-grow: 1;
+		}
+
+		button:last-child {
+			flex-grow: 1;
+		}
+	</style>
+
+	<div>
+		<button>Élément flex 1 (1/2)</button>
+		<button>Élément flex 2 (1/2)</button>
+	</div>
 
 </example-block>
 
@@ -112,6 +207,31 @@ déborder du conteneur. -->
 
 <example-block name="4.3">
 
+	<style>
+		div {
+			display: flex;
+			padding: .5rem;
+			border: 1px solid black;
+			width: 500px;
+		}
+
+		button {
+			width: 500px;
+		}
+
+		button:first-child {
+			flex-shrink: 1;
+		}
+
+		button:last-child {
+			flex-shrink: 2;
+		}
+	</style>
+
+	<div>
+		<button>Élément flex 1</button>
+		<button>Élément flex 2</button>
+	</div>
 
 </example-block>
 
@@ -124,6 +244,31 @@ déborder du conteneur. -->
 
 <example-block name="4.3">
 
+	<style>
+		div {
+			display: flex;
+			padding: .5rem;
+			border: 1px solid black;
+			width: 500px;
+		}
+
+		button {
+			flex-basis: 500px;
+		}
+
+		button:first-child {
+			flex-shrink: 1;
+		}
+
+		button:last-child {
+			flex-shrink: 2;
+		}
+	</style>
+
+	<div>
+		<button>Élément flex 1</button>
+		<button>Élément flex 2</button>
+	</div>
 
 </example-block>
 
@@ -143,6 +288,20 @@ de les centrer. -->
 
 <example-block name="5.1.1">
 
+	<style>
+		div {
+			display: flex;
+			border: 1px solid black;
+			padding: 0.5rem;
+			justify-content: center;
+		}
+	</style>
+
+	<div>
+		<button>Élément flex</button>
+		<button>Élément flex</button>
+		<button>Élément flex</button>
+	</div>
 
 </example-block>
 
@@ -158,6 +317,20 @@ extrémités. -->
 
 <example-block name="5.1.2">
 
+	<style>
+		div {
+			display: flex;
+			border: 1px solid black;
+			padding: 0.5rem;
+			justify-content: space-around;
+		}
+	</style>
+
+	<div>
+		<button>Élément flex</button>
+		<button>Élément flex</button>
+		<button>Élément flex</button>
+	</div>
 
 </example-block>
 
@@ -171,6 +344,25 @@ les éléments flex de manière à emplir le conteneur. -->
 
 <example-block name="5.2.1">
 
+	<style>
+		div {
+			display: flex;
+			border: 1px solid black;
+			padding: 0.5rem;
+			align-items: stretch;
+
+		}
+
+		button:first-child {
+			height: 5rem;
+		}
+	</style>
+
+	<div>
+		<button>Élément flex</button>
+		<button>Élément flex</button>
+		<button>Élément flex</button>
+	</div>
 
 </example-block>
 
@@ -183,6 +375,25 @@ intrinsèque, tout en étant centrés sur l'axe croisé. -->
 
 <example-block name="5.2.2">
 
+	<style>
+		div {
+			display: flex;
+			border: 1px solid black;
+			padding: 0.5rem;
+			align-items: center;
+
+		}
+
+		button:first-child {
+			height: 5rem;
+		}
+	</style>
+
+	<div>
+		<button>Élément flex</button>
+		<button>Élément flex</button>
+		<button>Élément flex</button>
+	</div>
 
 </example-block>
 
@@ -195,6 +406,25 @@ intrinsèque, tout en étant centrés sur l'axe croisé. -->
 
 <example-block name="5.2.3">
 
+	<style>
+		div {
+			display: flex;
+			border: 1px solid black;
+			padding: 0.5rem;
+			align-items: flex-start;
+
+		}
+
+		button:first-child {
+			height: 5rem;
+		}
+	</style>
+
+	<div>
+		<button>Élément flex</button>
+		<button>Élément flex</button>
+		<button>Élément flex</button>
+	</div>
 
 </example-block>
 
@@ -208,6 +438,33 @@ un seul élément flex donné en lui appliquant la propriété
 
 <example-block name="5.2.3">
 
+	<style>
+		div {
+			display: flex;
+			border: 1px solid black;
+			padding: 0.5rem;
+
+		}
+
+		button:first-child {
+			height: 5rem;
+		}
+
+		button:nth-child(2) {
+			align-self: flex-start;
+		}
+
+		button:last-child {
+			align-self: center;
+		}
+	</style>
+
+	<div>
+		<button>Élément flex</button>
+		<button>Élément flex</button>
+		<button>Élément flex</button>
+	</div>
+
 </example-block>
 
 <!------------------------------------------------------------------->
@@ -220,6 +477,22 @@ un seul élément flex donné en lui appliquant la propriété
 <!-- Exemple 6.1 ---------------------------------------------------->
 
 <example-block name="6.1">
+
+	<style>
+		div {
+			display: flex;
+			border: 1px solid black;
+			padding: 0.5rem;
+			gap: 1rem;
+
+		}
+	</style>
+
+	<div>
+		<button>Élément flex</button>
+		<button>Élément flex</button>
+		<button>Élément flex</button>
+	</div>
 
 </example-block>
 

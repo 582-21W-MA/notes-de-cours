@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+
+	<meta charset="UTF-8">
+	<script
+		src="https://maxime-pigeon.github.io/example-block/example-block.js"
+		type="module"
+	></script>
+	<title>Flexbox</title>
+
+<!------------------------------------------------------------------->
+<!-- 1. FLEXBOX ----------------------------------------------------->
+<!------------------------------------------------------------------->
+
+<!-- Flexbox est une méthode de mise en page qui permet de disposer
+des éléments selon un axe principal. Les éléments se dilatent ou
+se rétractent pour occuper l'espace disponible. -->
+
+<!-- Exemple 1.1 ---------------------------------------------------->
+
+<example-block name="1.1">
+
+
+</example-block>
+
+
+<!------------------------------------------------------------------->
+
+<!-- L'élément parent dont la propriété est `display: flex` est
+appelé le conteneur flex (flex container). Les éléments disposés
+en tant que boîtes flexibles à l'intérieur du conteneur flex sont
+appelés éléments flex (flex items). -->
+
+<!-- Exemple 1.2 ---------------------------------------------------->
+
+<example-block name="1.2">
+
+
+</example-block>
+
+<!------------------------------------------------------------------->
+<!-- 2. COLONNES OU LIGNE ------------------------------------------->
+<!------------------------------------------------------------------->
+
+<!-- Lorsque les éléments sont disposés en boîtes flexibles, ils
+sont disposés le long de deux axes. L'axe principal (main axis) est
+l'axe de la direction dans laquelle sont disposés les éléments
+flex. L'axe croisé (cross axis) est l'axe perpendiculaire à l'axe
+principal. Flexbox dispose de la propriété `flex-direction` pour
+indiquer la direction de l'axe principal. -->
+
+<!-- Exemple 2.1 ---------------------------------------------------->
+
+<example-block name="2.1">
+
+
+</example-block>
+
+<!------------------------------------------------------------------->
+<!-- 3. ENVELOPPEMENT ----------------------------------------------->
+<!------------------------------------------------------------------->
+
+<!-- Quand votre conteneur est de largeur ou hauteur fixe, il arrive
+que les éléments flex débordent. Pour y remédier, on peut utiliser
+la propriété `flex-wrap`. -->
+
+<!-- Exemple 3.1 ---------------------------------------------------->
+
+<example-block name="3.1">
+
+
+</example-block>
+
+<!------------------------------------------------------------------->
+<!-- 4. TAILLE MODULABLE -------------------------------------------->
+<!------------------------------------------------------------------->
+
+<!-- Examinons comment nous pouvons contrôler la proportion
+d'éléments flexibles dans l'espace. La propriété `flex` définie
+la quantité d'espace disponible que chaque élément flex prendra le
+long de l'axe principal. -->
+
+<!-- Exemple 4.1 ---------------------------------------------------->
+
+<example-block name="4.1">
+
+
+</example-block>
+
+<!------------------------------------------------------------------->
+
+<!-- `flex` est une forme abrégée de propriété qui peut servir
+à définir trois valeurs différentes : `flex-grow`, `flex-shrink`,
+`flex-basis`. Comme nous avons vu ci-haut, `flex-grow` définie la
+quantité d'espace disponible que chaque élément flex prendra le
+long de l'axe principal. -->
+
+<!-- Exemple 4.2 ---------------------------------------------------->
+
+<example-block name="4.2">
+
+
+</example-block>
+
+<!------------------------------------------------------------------->
+
+<!-- `flex-shrink` indique la quantité de dépassement à retirer
+de l'extension de chacun des éléments flex pour les empêcher de
+déborder du conteneur. -->
+
+<!-- Exemple 4.3 ---------------------------------------------------->
+
+<example-block name="4.3">
+
+
+</example-block>
+
+<!------------------------------------------------------------------->
+
+<!-- Pour faire simple, `flex-basis` équivaut à `width` et `height`
+(selon la direction de l'axe principal). -->
+
+<!-- Exemple 4.4 ---------------------------------------------------->
+
+<example-block name="4.3">
+
+
+</example-block>
+
+<!------------------------------------------------------------------->
+<!-- 5. ALIGNEMENT -------------------------------------------------->
+<!------------------------------------------------------------------->
+
+<!-- 5.1 AXE PRINCIPAL ---------------------------------------------->
+
+<!-- `justify-content` fixe où les éléments flex sont placés sur
+l'axe principal. La valeur par défaut est `flex-start` : tous les
+éléments sont disposés à partir de l'origine de l'axe principal.
+`flex-end` permet de les disposer à partir de la fin. `center` permet
+de les centrer. -->
+
+<!-- Exemple 5.1.1 -------------------------------------------------->
+
+<example-block name="5.1.1">
+
+
+</example-block>
+
+<!------------------------------------------------------------------->
+
+<!-- La valeur `space-around` distribue régulièrement tous les
+éléments le long de l'axe principal, en laissant autant d'espace
+à chaque extrémité qu'entre chacun. La valeur `space-between`
+est semblable à space-around, mais elle ne laisse pas d'espace aux
+extrémités. -->
+
+<!-- Exemple 5.1.2 -------------------------------------------------->
+
+<example-block name="5.1.2">
+
+
+</example-block>
+
+<!-- 5.2 AXE CROISÉ ------------------------------------------------->
+
+<!-- `align-items` fixe là où les éléments flex sont placés sur
+l'axe croisé. Par défaut, la valeur est `stretch`, qui étire tous
+les éléments flex de manière à emplir le conteneur. -->
+
+<!-- Exemple 5.2.1 -------------------------------------------------->
+
+<example-block name="5.2.1">
+
+
+</example-block>
+
+<!------------------------------------------------------------------->
+
+<!-- Avec la valeur `center`, les éléments gardent leur dimension
+intrinsèque, tout en étant centrés sur l'axe croisé. -->
+
+<!-- Exemple 5.2.2 -------------------------------------------------->
+
+<example-block name="5.2.2">
+
+
+</example-block>
+
+<!------------------------------------------------------------------->
+
+<!-- `flex-start` et `flex-end` alignent respectivement tous les
+éléments au début ou à la fin de l'axe croisé. -->
+
+<!-- Exemple 5.2.3 -------------------------------------------------->
+
+<example-block name="5.2.3">
+
+
+</example-block>
+
+<!------------------------------------------------------------------->
+
+<!-- Vous pouvez contrôler le comportement de `align-items` pour
+un seul élément flex donné en lui appliquant la propriété
+`align-self`. -->
+
+<!-- Exemple 5.2.3 -------------------------------------------------->
+
+<example-block name="5.2.3">
+
+</example-block>
+
+<!------------------------------------------------------------------->
+<!-- 6. ESPACEMENT -------------------------------------------------->
+<!------------------------------------------------------------------->
+
+<!-- La propriété `gap` permet de créer un espace entre chaque
+élément flex. -->
+
+<!-- Exemple 6.1 ---------------------------------------------------->
+
+<example-block name="6.1">
+
+</example-block>
+
+<!------------------------------------------------------------------->
+<!-- 7. RESSOURCES -------------------------------------------------->
+<!------------------------------------------------------------------->
+
+<!-- https://developer.mozilla.org/fr/docs/Learn/CSS/CSS_layout/Flexbox
+-->
+<!-- https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/ -->

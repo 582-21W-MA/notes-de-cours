@@ -25,7 +25,7 @@ d'environnement `PATH`.
 ### Utilisation
 
 Pour utiliser Mustache à partir d'une interface en ligne de commande,
-on invoque la commande `mustache` suivie du jeu de donné suivi du
+on invoque la commande `mustache` suivie du jeu de données suivi du
 gabarit :
 
 ```sh
@@ -71,7 +71,7 @@ Par exemple, étant donné le jeu de donnés suivant en format JSON :
 
 ```json
 {
-	fruits: ["Banane", "Kiwi", "Fraise"]
+	"fruits": ["Banane", "Kiwi", "Fraise"]
 }
 ```
 
@@ -145,7 +145,7 @@ Par exemple, étant donné le jeu de données suivant en format JSON :
 
 ```json
 {
-	ingredients: ["Steak", "Blé d'inde", "Patates"]
+	"ingredients": ["Steak", "Blé d'inde", "Patates"]
 }
 ```
 
@@ -179,5 +179,5 @@ Mustache produira :
 
 ## Ressources
 
-- [Documentation de la commande `mustache`](https://mustache.github.io/mustache.1.html)
+- [Documentation de la commande mustache](https://mustache.github.io/mustache.1.html)
 - [Documentation du langage Mustache](https://mustache.github.io/mustache.5.html)

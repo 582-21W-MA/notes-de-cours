@@ -156,7 +156,7 @@ dont le contenu est :
 <article>{{.}}</article>
 ```
 
-ainsi qu'un gabarit dont le chemin est `/index.html` et le contenu
+ainsi qu'un gabarit dont le chemin est `/index.mustache` et le contenu
 est :
 
 ```html

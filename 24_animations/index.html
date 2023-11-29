@@ -60,6 +60,28 @@ utilisé comme référence à l'animation pour la règle @keyframes.
 
 <example-block name="2.1.1">
 
+    <style>
+        /* Attention, comme toutes les autres règles @, la règle
+        `@keyframe` doit être déclarée au premier niveau, et non
+        pas à l'intérieur d'un sélecteur. */
+        @keyframes slide {
+            0% {
+                margin-top: 0;
+                color: red;
+            }
+
+            100% {
+                margin-top: 5rem;
+                color: yellow;
+            }
+        }
+
+        button {
+            animation-name: slide;
+        }
+    </style>
+
+    <button>Button</button>
 
 </example-block>
 
@@ -72,6 +94,26 @@ utilisé comme référence à l'animation pour la règle @keyframes.
 
 <example-block name="2.2.1">
 
+    <style>
+        @keyframes slide {
+            0% {
+                margin-top: 0;
+                color: red;
+            }
+
+            100% {
+                margin-top: 5rem;
+                color: yellow;
+            }
+        }
+
+        button {
+            animation-name: slide;
+            animation-duration: 5s;
+        }
+    </style>
+
+    <button>Button</button>
 
 </example-block>
 
@@ -85,6 +127,27 @@ répéter une animation infiniment. -->
 
 <example-block name="2.3.1">
 
+    <style>
+        @keyframes slide {
+            0% {
+                margin-top: 0;
+                color: red;
+            }
+
+            100% {
+                margin-top: 5rem;
+                color: yellow;
+            }
+        }
+
+        button {
+            animation-name: slide;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+
+    <button>Button</button>
 
 </example-block>
 
@@ -97,6 +160,16 @@ l'élément est chargé et le moment où l'animation commence. -->
 
 <example-block name="2.4.1">
 
+    <style>
+        button {
+            animation-name: slide;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+        }
+    </style>
+
+    <button>Button</button>
 
 </example-block>
 
@@ -111,6 +184,28 @@ au début à chaque cycle de répétition. Les valeurs possibles sont
 
 <example-block name="2.5.1">
 
+    <style>
+        @keyframes slide {
+            0% {
+                margin-top: 0;
+                color: red;
+            }
+
+            100% {
+                margin-top: 5rem;
+                color: yellow;
+            }
+        }
+
+        button {
+            animation-name: slide;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+    </style>
+
+    <button>Button</button>
 
 </example-block>
 
@@ -125,6 +220,28 @@ l'animation. Les valeurs possibles sont `none`, `forwards`,
 
 <example-block name="2.6.1">
 
+    <style>
+        @keyframes slide {
+            0% {
+                margin-top: 0;
+                color: red;
+            }
+
+            100% {
+                margin-top: 5rem;
+                color: yellow;
+            }
+        }
+
+        button {
+            animation-name: slide;
+            animation-duration: 2s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+        }
+    </style>
+
+    <button>Button</button>
 
 </example-block>
 
@@ -137,6 +254,31 @@ reprendre l'exécution d'une animation. -->
 
 <example-block name="2.7.1">
 
+    <style>
+        @keyframes slide {
+            0% {
+                margin-top: 0;
+                color: red;
+            }
+
+            100% {
+                margin-top: 5rem;
+                color: yellow;
+            }
+        }
+
+        button {
+            animation-name: slide;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        button:hover {
+            animation-play-state: paused;
+        }
+    </style>
+
+    <button>Button</button>
 
 </example-block>
 
@@ -151,6 +293,29 @@ des courbes d'accélération. -->
 
 <example-block name="2.8.1">
 
+    <style>
+        @keyframes slide {
+            0% {
+                margin-top: 0;
+                color: red;
+            }
+
+            100% {
+                margin-top: 5rem;
+                color: yellow;
+            }
+        }
+
+        button {
+            animation-name: slide;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+        }
+    </style>
+
+    <button>Button</button>
 
 </example-block>
 
@@ -183,6 +348,34 @@ entre l'état initial et l'état final de l'animation. -->
 
 <example-block name="3.1">
 
+    <style>
+        @keyframes slide {
+            0% {
+                margin-top: 0;
+                color: red;
+            }
+
+            50% {
+                margin-left: 5rem;
+                color: green;
+            }
+
+            100% {
+                margin-top: 5rem;
+                color: yellow;
+            }
+        }
+
+        button {
+            animation-name: slide;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+        }
+    </style>
+
+    <button>Button</button>
 
 </example-block>
 

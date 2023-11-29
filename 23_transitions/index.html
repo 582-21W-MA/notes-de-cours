@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+<script
+	src="https://maxime-pigeon.github.io/example-block/example-block.js"
+	type="module"
+></script>
+<title>Transitions</title>
+
+<!------------------------------------------------------------------->
+<!-- 1. LES TRANSITIONS CSS ----------------------------------------->
+<!------------------------------------------------------------------->
+
+<!-- Les transitions CSS permettent de contrôler la vitesse
+d'animation lorsque les propriétés CSS sont modifiées. Plutôt
+que le changement soit immédiat, on peut l'étaler sur une certaine
+période. -->
+
+<!-- Ainsi, si on souhaite passer un élément de blanc à noir, on
+pourra utiliser les transitions CSS afin que cette modification soit
+effectuée progressivement, selon une courbe d'accélération donnée.
+-->
+
+<!-- Exemple 1.1 ---------------------------------------------------->
+
+<example-block name="1.1">
+
+    <style>
+        button {
+            background: gainsboro;
+            transition: background-color 1s;
+        }
+
+        button:hover {
+            background: red;
+        }
+    </style>
+
+    <button>Button</button>
+
+</example-block>
+
+
+<!------------------------------------------------------------------->
+<!-- 2. QUELLES SONT LES PROPRIÉTÉS QUI PEUVENT ÊTRE ANIMÉES ? ------>
+<!------------------------------------------------------------------->
+
+<!-- Consultez la liste des propriétés qui peuvent être animées
+à l'adresse suivante : https://developer.mozilla.org/fr/docs/Web/
+CSS/CSS_animated_properties -->
+
+<!-- 2.1 LA VALEUR `auto` ------------------------------------------->
+
+<!-- Quoique certains navigateurs permettent les transitions avec
+la valeur `auto`, cela n'est pas requis par la spécification
+officielle. Il est donc mieux de l'éviter.  -->
+
+<!-- 2.2 `.appendChild()` ET `display: none;` ----------------------->
+
+<!-- Attention lorsqu'on manipule des transitions directement après
+avoir ajouté un élément via .appendChild() ou en supprimant la
+propriété display: none;. Cela sera compris comme si l'état initial
+n'avait jamais eu lieu et que l'élément avait toujours été dans
+son état final. -->
+
+<!-- Pour contourner ce problème, on peut appliquer
+`window.setTimeout()` pendant quelques millisecondes avant de modifier
+la propriété CSS sur laquelle on souhaite appliquer une transition.
+-->
+
+<!-- Exemple 2.2.1 -------------------------------------------------->
+
+<example-block name="2.2.1">
+
+    <style>
+        button {
+            width: auto;
+            transition: width 1s;
+        }
+
+        button:hover {
+            width: 500px;
+        }
+    </style>
+
+    <button>Button</button>
+
+</example-block>
+
+<!------------------------------------------------------------------->
+<!-- 3. LES PROPRIÉTÉS RELATIVES AUX TRANSITIONS -------------------->
+<!------------------------------------------------------------------->
+
+<!-- 3.1 transition-property ---------------------------------------->
+
+<!-- Cette propriété définit le nom des propriétés CSS pour
+lesquelles on veut appliquer des transitions. -->
+
+<!-- Exemple 3.1.1 -------------------------------------------------->
+
+<example-block name="3.1.1">
+
+    <style>
+        button {
+            background: gainsboro;
+            transition-property: background;
+            transition-duration: 1s;
+        }
+
+        button:hover {
+            background: red;
+        }
+    </style>
+
+    <button>Button</button>
+
+</example-block>
+
+<!-- 3.2 transition-duration ---------------------------------------->
+
+<!-- Cette propriété définit la durée de la transition. -->
+
+<!-- Exemple 3.2.1 -------------------------------------------------->
+
+<example-block name="3.2.1">
+
+    <style>
+        button {
+            background: gainsboro;
+            transition-property: background;
+            transition-duration: 1s;
+        }
+
+        button:hover {
+            background: red;
+        }
+    </style>
+
+    <button>Button</button>
+
+</example-block>
+
+<!-- 3.3 transition-timing-function --------------------------------->
+
+<!-- Cette propriété définit une fonction qui décrit la façon
+dont les valeurs intermédiaires sont calculées. On utilise pour cela
+des fonctions de temporisation. -->
+
+<!-- Exemple 3.3.1 -------------------------------------------------->
+
+<example-block name="3.3.1">
+
+    <style>
+        button {
+            width: 5rem;
+            transition: width 1s;
+            transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        button:hover {
+            width: 10rem;
+        }
+    </style>
+
+    <button>Button</button>
+
+</example-block>
+
+<!-- 3.4 transition-delay ------------------------------------------->
+
+<!-- Cette propriété indique le temps à attendre entre le moment
+où la propriété est modifiée et le début de la transition. -->
+
+<!-- Exemple 3.4.1 -------------------------------------------------->
+
+<example-block name="3.4.1">
+
+    <style>
+        button {
+            background: gainsboro;
+            transition: background-color 1s;
+            transition-delay: 1s;
+        }
+
+        button:hover {
+            background: red;
+        }
+    </style>
+
+    <button>Button</button>
+
+</example-block>
+
+<!-- 3.5 transition ------------------------------------------------->
+
+<!-- La syntaxe de la propriété raccourcie transition est :
+transition: <property> <duration> <timing-function> <delay>. -->
+
+<!-- Exemple 3.5.1 -------------------------------------------------->
+
+<example-block name="3.5.1">
+
+    <style>
+        button {
+            background: gainsboro;
+            transition: background-color 1s ease 500ms;
+        }
+
+        button:hover {
+            background: red;
+        }
+    </style>
+
+    <button>Button</button>
+
+</example-block>
+
+<!------------------------------------------------------------------->
+<!-- 4. POST-SCRIPTUM SUR LES TRANSITIONS --------------------------->
+<!------------------------------------------------------------------->
+
+<!-- En 1993, dans un article intitulé « Three Important Time Limits
+», Jakob Nielsen raconte une étude scientifique ayant pour but de
+mesurer la réaction humaine au temps de réponse des ordinateurs. -->
+
+<!-- Selon cette étude, un temps de réponse de 100ms ou moins semble
+instantané pour l'utilisateur·rice. -->
+
+<!-- Exemple 4.1 ---------------------------------------------------->
+
+<example-block name="4.1">
+
+    <style>
+        button {
+            background: gainsboro;
+            transition: background-color 1s;
+            transition-duration: 100ms;
+        }
+
+        button:hover {
+            background: red;
+        }
+    </style>
+
+    <button>Button</button>
+
+</example-block>
+
+<!------------------------------------------------------------------->
+
+<!-- Après 1 seconde, l'utilisateur·rice se sent toujours
+« connecté » à l'interface. -->
+
+<!-- Exemple 4.2 ---------------------------------------------------->
+
+<example-block name="4.2">
+
+    <style>
+        button {
+            background: gainsboro;
+            transition: background-color 1s;
+            transition-duration: 1s;
+        }
+
+        button:hover {
+            background: red;
+        }
+    </style>
+
+    <button>Button</button>
+
+</example-block>
+
+<!------------------------------------------------------------------->
+
+<!-- Après 10 secondes, l'utilisateur·rice commence à se sentir
+déconnecté·e. -->
+
+<!-- Exemple 4.3 ---------------------------------------------------->
+
+<example-block name="4.3">
+
+    <style>
+        button {
+            background: gainsboro;
+            transition: background-color 1s;
+            transition-duration: 10s;
+        }
+
+        button:hover {
+            background: red;
+        }
+    </style>
+
+    <button>Button</button>
+
+</example-block>
+
+<!------------------------------------------------------------------->
+
+<!-- Un peu plus de 15 ans plus tard, Google mène une expérience
+pendant laquelle ils ralentissent leurs résultats de recherche de
+100ms à 200ms. L'impact est si important que même des semaines
+après l'expérience, les utilisateurs·rices ayant fait l'expérience
+du temps de réponse ralenti ne cherchent plus autant qu'auparavant.
+-->
+
+<!------------------------------------------------------------------->
+
+<!-- Selon https://humanbenchmark.com, un ou une utilisatrice prend en
+moyenne 273ms pour réagir à un changement visuel. C'est pourquoi la
+majorité des animations dans divers interfaces ont une durée entre
+200ms et 300ms. -->
+
+<!------------------------------------------------------------------->
+<!-- RESSOURCES ----------------------------------------------------->
+<!------------------------------------------------------------------->
+
+<!-- https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions -->
+<!-- https://www.joshwcomeau.com/animation/css-transitions/ -->
+<!-- https://cubic-bezier.com/ -->

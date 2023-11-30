@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+<script
+	src="https://maxime-pigeon.github.io/example-block/example-block.js"
+	type="module"
+></script>
+<title>SVG</title>
+
+<!------------------------------------------------------------------->
+<!-- 1. SVG --------------------------------------------------------->
+<!------------------------------------------------------------------->
+
+<!-- SVG (en anglais, Scalable Vector Graphics, soit graphiques
+vectoriels adaptables) est un format texte qui permet de décrire des
+graphiques vectoriels en deux dimensions. Contrairement aux images
+matricielles, les images SVG peuvent être affichées à n’importe
+quelle taille sans perdre de qualité. Il est également possible de
+les modifier programmatiquement, et de les animer. -->
+
+<!-- Un SVG de base contient généralement un ou plusieurs éléments
+<path>, chacun avec son propre attribut `d` (path data). -->
+
+<!-- Exemple 1.1 ---------------------------------------------------->
+
+<example-block name="1.1">
+
+    <style>
+        path {
+            stroke: black;
+            stroke-width: 1px;
+            fill: none;
+        }
+    </style>
+
+    <svg viewbox="0 0 20 20">
+        <path
+            d="M 11.995 7.23319 C 10.5455 5.60999 8.12832 5.17335
+            6.31215 6.65972 C 4.4959 8.14609 4.2403 10.6312 5.66654
+            12.3892 L 11.995 18.25 L 18.3235 12.3892 C 19.7498 10.6312
+            19.5253 8.13046 17.6779 6.65972 C 15.8305 5.18899 13.4446
+            5.60999 11.995 7.23319 Z"
+        />
+    </svg>
+
+</example-block>
+
+<!------------------------------------------------------------------->
+<!-- 2. RESSOURCES -------------------------------------------------->
+<!------------------------------------------------------------------->
+
+<!-- https://www.nan.fyi/svg-paths -->

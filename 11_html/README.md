@@ -13,8 +13,12 @@ articles :
 - [Créer des liens](https://developer.mozilla.org/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links)
 - [Images](https://developer.mozilla.org/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [Tableaux](https://developer.mozilla.org/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
+- [Formulaires](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_forms)
+
+Vous trouverez sur MDN une [liste des éléments HTML].
 
 De plus, on vous rappelle que le HTML que vous écrivez doit être valide
 selon le [service de validation du W3C][W3C].
 
+[liste des éléments HTML]: https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements
 [W3C]: https://validator.w3.org/#validate_by_input
